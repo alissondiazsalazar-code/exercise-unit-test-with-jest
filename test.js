@@ -32,3 +32,9 @@ test("One dollar should be 146.26 yen", function() {
     // Hago mi comparación (la prueba)
     expect(fromDollarToYen(3.5)).toBe(511.91); // 1 euro son 1.07 dólares, entonces 3.5 euros deberían ser = (3.5 * 1.07)
 })
+
+test("One yen should be 0.00556 pounds", function() {
+  const {fromYenToPound } = require('./app.js');
+  
+  expect(fromYenToPound(3.5)).toBe(0.01946);
+});
